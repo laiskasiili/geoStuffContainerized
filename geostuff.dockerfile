@@ -4,7 +4,7 @@ LABEL Description="Setup a container with gdal and python bindings."
 
 WORKDIR /home
 
-# Install GDAL for python
+# Install GDAL
 # Kudos to these people:
 # https://gis.stackexchange.com/questions/28966/python-gdal-package-missing-header-file-when-installing-via-pip
 RUN apt update && apt install -y binutils libproj-dev gdal-bin libgdal-dev
