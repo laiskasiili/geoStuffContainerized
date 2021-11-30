@@ -44,7 +44,7 @@ After the course we want to get you computer in the same state as before. There 
 2. Uninstall Docker Desktop.
 
 # Can it be even easier? Yes!
-As with many common software packages, some people already built a GDAL image for you and published it on docker hub for free access! Using this image, the whole setup simplifies to the following steps:
+As with many common software packages, some people already built a GDAL image for you and published it on [docker hub](https://hub.docker.com/r/osgeo/gdal) for free access! Using this image, the whole setup simplifies to the following steps:
 1. Install Docker Desktop
 2. Pull the GDAL image from docker hub: ```docker pull osgeo/gdal```
 3. Run the container: ```docker run -it --rm --volume="FULL_PATH_TO_YOUR_DATA_FOLDER":"/data" osgeo/gdal:latest```
