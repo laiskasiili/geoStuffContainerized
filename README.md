@@ -19,7 +19,7 @@ Think of containers as a concept that addresses all these issues: Containers run
 
 For now, let's take a very pragmatic view that hopefully helps to at least partially understand some terminology used in the step-by-step guide commands below:
 
-Docker allows you to run software as linux proceses in their own isolated universe, independent of the host platform (windows, mac, linux). At the core is a simple standardized text file - called a __dockerfile__ - which contains a set of instructions on how to __build an image__ in a standardized and reproducible way. An image is a template that can be shared with others and has all the software specified by the dockerfile installed. From an image an arbitrary amount of __containers can be run__.
+Docker allows you to run software as linux processes in their own isolated universe, independent of the host platform (windows, mac, linux). At the core is a simple standardized text file - called a __dockerfile__ - which contains a set of instructions on how to __build an image__ in a standardized and reproducible way. An image is a template that can be shared with others and has all the software specified by the dockerfile installed. From an image an arbitrary amount of __containers can be run__.
 
 # Step-by-step
 1. Download and install [Docker Desktop](https://www.docker.com/products/docker-desktop). After the installation you can close the graphical Docker Desktop User Interface, we don't need it and it runs in the background. Test that the installation was successful by opening a terminal and typing ```docker --version```.
