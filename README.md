@@ -42,3 +42,9 @@ Docker allows you to run software as linux processes in their own isolated unive
 After the course we want to get you computer in the same state as before. There are only two simple steps needed to do so:
 1. Delete the image: Open Docker Desktop and navigate to the _Containers_ tab, make sure to stop and remove all containers if there are any. Then go to the _Images_ tab and remove the gdal image. This will free up 1+GB on your harddrive!
 2. Uninstall Docker Desktop.
+
+# Can it be even easier? Yes!
+As with many common software packages, some people already built a GDAL image for you and published it on docker hub for free access! Using this image, the whole setup simplifies to the following steps:
+1. Install Docker Desktop
+2. Pull the GDAL image from docker hub: ```docker pull osgeo/gdal```
+3. Run the container: ```docker run -it --rm --volume="FULL_PATH_TO_YOUR_DATA_FOLDER":"/data" osgeo/gdal:latest```
