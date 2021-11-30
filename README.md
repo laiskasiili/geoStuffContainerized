@@ -3,10 +3,10 @@
 ## What is this about?
 Installing GDAL with python bindings for a workshop is painful:
 - Participants have different hardware and OS.
-- Participants have different python version.
+- Participants have different (system) python versions and might not know about the beauty of virtual environments.
 - Participants might already have some globally installed (potentially conflicting) versions of the software of interest installed, e.g. from a QGIS installation.
 - GDAL usually requires fiddling around with system paths.
-- We do NOT want to mess up participant's computers in any way, e.g. by fiddling around with system paths.
+- We do NOT want to permanently alter (read: mess up) participant's computers in any way, e.g. by fiddling around with system paths.
 - The setup should be easy and fast - also for non technical participants.
 - The setup should be reproducible and documented, so that participants can make use of it even after the course.
 
