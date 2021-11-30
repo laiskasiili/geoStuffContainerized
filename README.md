@@ -27,9 +27,9 @@ Docker allows you to run software as linux proceses in their own isolated univer
 2. Download this [repository as zip](https://github.com/laiskaSiili/geoStuffContainerized/archive/refs/heads/main.zip) and unzip it. We really are only interested in a single file: _geostuff.dockerfile_
 > _Good to know_: If you are versed in git, you can of course just clone the repository.
 3. Open a terminal and navigate to the folder where you unziped the downloaded repository. You want to be in the same folder as _geostuff.dockerfile_
-4. In the terminal run the following command to build an image. This may take some time, but it i a one-time thing:
+4. In the terminal run the following command to build an image. This may take some time, but it is a one-time thing:
 ```docker build -t geostuffcontainerized:latest -f geostuff.dockerfile .```
-5. Start a container with the following command in your terminal. Replace FULL_PATH_TO_YOUR_DATA_FOLDER with the full path of the folder that contains the data you want to manipulate:
+5. Start a container with the command below in your terminal. Replace FULL_PATH_TO_YOUR_DATA_FOLDER with the full path of the folder that contains the data you want to manipulate:
 ```docker run -it --rm --volume="FULL_PATH_TO_YOUR_DATA_FOLDER":"/home/data" geostuffcontainerized:latest```
 > _Just an example_: ```docker run -it --rm --volume="C:\Users\laiskaSiili\mydata":"/home/data" geostuffcontainerized:latest```
 6. You should see your terminal change to something like root@3b1bf65. __Congratulations, you are now inside the container, inside your a new small universe!__ You should be in /home directory. Type ```ls``` and you should see a folder _data_ which contains the same files as the data folder you specified the full path to above. In fact, they _are_ the same files! Whatever you write in this data folder is both visible in the container as well as in your normal file system.
