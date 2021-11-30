@@ -21,8 +21,8 @@ For now, let's take a very pragmatic view that hopefully helps to at least parti
 
 Docker allows you to run software as linux proceses in their own isolated universe, independent of the host platform (windows, mac, linux). At the core is a simple standardized text file - called a __dockerfile__ - which contains a set of instructions on how to __build an image__ in a standardized and reproducible way. An image is a template that can be shared with others and has all the software specified by the dockerfile installed. From an image an arbitrary amount of __containers can be run__.
 
-# Setup guide
-1. Download and install [docker for desktop](https://www.docker.com/products/docker-desktop). After the installation you can close the graphical Docker Desktop User Interface, we don't need it and it runs in the background. Test that the installation was successful by opening a terminal and typing ```docker --version```.
+# Step-by-step
+1. Download and install [Docker Desktop](https://www.docker.com/products/docker-desktop). After the installation you can close the graphical Docker Desktop User Interface, we don't need it and it runs in the background. Test that the installation was successful by opening a terminal and typing ```docker --version```.
 > _Good to know_: If you get an error message mentioning a _daemon_, make sure Docker Desktop is running (search for Docker Desktop and click to start the application).
 2. Download this [repository as zip](https://github.com/laiskaSiili/geoStuffContainerized/archive/refs/heads/main.zip) and unzip it. We really are only interested in a single file: _geostuff.dockerfile_
 > _Good to know_: If you are versed in git, you can of course just clone the repository.
