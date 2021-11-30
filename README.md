@@ -48,3 +48,4 @@ As with many common software packages, some people already built a GDAL image fo
 1. Install Docker Desktop
 2. Pull the GDAL image from docker hub: ```docker pull osgeo/gdal```
 3. Run the container: ```docker run -it --rm --volume="FULL_PATH_TO_YOUR_DATA_FOLDER":"/data" osgeo/gdal:latest```
+> _Good to know_: If you are very lazy you could even skip step 2) and directly run the docker run command. If it is the first time docker will not find the specified image and will automatically look for a match in docker hub - amazing! But remember the second line of Python Zen: "Explicit is better than implicit".
