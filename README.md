@@ -15,7 +15,7 @@ Luckily container technology has matured to the point by now where it is a viabl
 ## Setup guide
 
 ### Wait, give me the high level picture first
-
+TBD
 
 ### Step-by-step guide
 1. Download and install [docker for desktop](https://www.docker.com/products/docker-desktop). After the installation you can close the graphical Docker Desktop User Interface, we don't need it and it runs in the background. Test that the installation was successful by opening a terminal and typing ```docker --version```.
@@ -31,4 +31,10 @@ Luckily container technology has matured to the point by now where it is a viabl
 6. You should see your terminal change to something like root@3b1bf65. __Congratulations, you are now inside the container, inside your a new small universe!__ You should be in /home directory. Type ```ls``` and you should see a folder _data_ which contains the same files as the data folder you specified the full path to above. In fact, they _are_ the same files! Whatever you write in this data folder is both visible in the container as well as in your normal file system.
 > _Good to know_: If you are a windows user you might quickly notice strange things when working in this container terminal. Paths need to be specified with forward slashes, the commands to list items is ```ls``` instead of ```dir``` and pasting stuff is no longer Ctrl+V but rather a simple right click. What is going on??? The container you are working in is actually a linux ubuntu system! Embrace the light side of the force and google the linux shell commands if needed!
 7. You have access to GDAL via command line (type ```gdalinfo --version```) which also includes ogr2ogr. You have also access to gdal within python. Type ```python``` to enter python terminal and then type ```from osgeo import gdal```. If you see no error message, the import worked and you are ready. Leave python terminal by typing ```quit()``` to return to your container terminal.
-8. When you are done, type ```exit``` in your container's terminal to return back to your normal system terminal. The container will be shut down and destroyed. When you restart the container the data in the data folder will still be there, but the system dependencies will be reset. So feel free to experiment as wildly as you want with the system packages - you cannot destroy anything!
+8. When you are done, type ```exit``` in your container's terminal to return back to your normal system terminal. The container will be shut down and destroyed. You can start a new container anytime as explained in step 5 above!
+> _Good to know_: Whatever data you save in the home/data folder in your container will be persistently written to whatever full path you specified when starting the container. Everything else will be reset, meaning everytime you start a container you will have a fresh and working GDAL installation. So feel free to experiment as wildly as you want with the system packages - you cannot destroy anything!
+
+## Final cleanup
+After the course we want to get you computer in the same state as before. There are only two simple steps needed to do so:
+1. Delete the image: Open Docker Desktop and navigate to the _Containers_ tab, make sure to stop and remove all containers if there are any. Then go to the _Images_ tab and remove the geostuffcontainerized image. This will free up 1+GB on your harddrive!
+2. Uninstall Docker Desktop.
